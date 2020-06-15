@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: relative;
+    margin-top: 200px;
+    margin-left: 550px;
+}
+.bg{
+    background-color: #197bfb;
+    background-image: linear-gradient(270deg, #197bfb 0%, #B721FF 100%);   
+}
+
+.button{
+    width: 80px;
+    height: 80px;
+    margin: 3px;
+}
+
+.textResult{
+   width: 345px;
+   font-size: 25px;
+}
