@@ -10,42 +10,44 @@
     <!-- agregar metas -->
 </head>
 
-<body class="bg">
-    <div class="container">
-        <form name="form">
-            <input class="textResult my-2">
-        </form>
-        <table>
-            <tr>
-                <td><input class="btn btn-light button" type="button" value="C"></td>
-                <td><input class="btn btn-light button" type="button" value="%"></td>
-                <td><input class="btn btn-light button" type="button" value="/"></td>
-                <td><input class="btn btn-light button" type="button" value="X"></td>
-            </tr>
-            <tr>
-                <td><input class="btn btn-light button" type="button" value="7"></td>
-                <td><input class="btn btn-light button" type="button" value="8"></td>
-                <td><input class="btn btn-light button" type="button" value="9"></td>
-                <td><input class="btn btn-light button" type="button" value="-"></td>
-            </tr>
-            <tr>
-                <td><input class="btn btn-light button" type="button" value="4"></td>
-                <td><input class="btn btn-light button" type="button" value="5"></td>
-                <td><input class="btn btn-light button" type="button" value="6"></td>
-                <td><input class="btn btn-light button" type="button" value="+"></td>
-            </tr>
-            <tr>
-                <td><input class="btn btn-light button" type="button" value="1"></td>
-                <td><input class="btn btn-light button" type="button" value="2"></td>
-                <td><input class="btn btn-light button" type="button" value="3"></td>
-                <td><input class="btn btn-light button" type="button" value="="></td>
-            </tr>
-    </div>
+<body onload=init() class="bg">
+    <table class="calculadora">
+        <tr>
+            <div class="resultado my-2 calculadora" id="resultado"></div>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light button" id="siete">7</button></td>
+            <td><button class="btn btn-light button" id="ocho">8</button></td>
+            <td><button class="btn btn-light button" id="nueve">9</button></td>
+            <td><button class="btn btn-light button" id="division">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light button" id="cuatro">4</button></td>
+            <td><button class="btn btn-light button" id="cinco">5</button></td>
+            <td><button class="btn btn-light button" id="seis">6</button></td>
+            <td><button class="btn btn-light button" id="multiplicacion">*</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light button" id="uno">1</button></td>
+            <td><button class="btn btn-light button" id="dos">2</button></td>
+            <td><button class="btn btn-light button" id="tres">3</button></td>
+            <td><button class="btn btn-light button" id="resta">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-light button" id="igual">=</button></td>
+            <td><button class="btn btn-light button" id="reset">C</button></td>
+            <td><button class="btn btn-light button" id="cero">0</button></td>
+            <td><button class="btn btn-light button" id="suma">+</button></td>
+        </tr>
     </table>
+    <script src="funcionalidad.js"></script>
+</body>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/calculator.js"></script>
 </body>
 
 </html>

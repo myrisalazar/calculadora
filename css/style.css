@@ -2,23 +2,28 @@
     margin: 0;
     padding: 0;
 }
-.container{
-    position: relative;
-    margin-top: 200px;
-    margin-left: 550px;
-}
+
 .bg{
     background-color: #197bfb;
     background-image: linear-gradient(270deg, #197bfb 0%, #B721FF 100%);   
 }
 
-.button{
+ .button{
     width: 80px;
     height: 80px;
-    margin: 3px;
+    margin: 2px;
 }
 
-.textResult{
-   width: 345px;
-   font-size: 25px;
+.resultado{
+    width: 335px;
+    height: 70px;
+    background-color: whitesmoke;
 }
+
+.calculadora{
+    position: relative;
+    left: 550px;
+    top: 200px;
+}
+
+ 
