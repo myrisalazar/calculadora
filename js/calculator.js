@@ -1,6 +1,6 @@
+let operacionUno;
+let operacionDos;
 let operacion;
-let op1;
-let op2;
 
 
 function init() {
@@ -28,83 +28,92 @@ function init() {
 uno.onclick = function () {
     resultado.textContent = resultado.textContent + "1";
 }
-dos.onclick = function (){
+dos.onclick = function () {
     resultado.textContent = resultado.textContent + "2";
 }
-tres.onclick = function (){
+tres.onclick = function () {
     resultado.textContent = resultado.textContent + "3";
 }
-cuatro.onclick = function (){
+cuatro.onclick = function () {
     resultado.textContent = resultado.textContent + "4";
 }
-cinco.onclick = function (){
+cinco.onclick = function () {
     resultado.textContent = resultado.textContent + "5";
 }
-seis.onclick = function (){
+seis.onclick = function () {
     resultado.textContent = resultado.textContent + "6";
 }
-siete.onclick = function (){
+siete.onclick = function () {
     resultado.textContent = resultado.textContent + "7";
 }
-ocho.onclick = function (){
+ocho.onclick = function () {
     resultado.textContent = resultado.textContent + "8";
 }
-nueve.onclick = function (){
+nueve.onclick = function () {
     resultado.textContent = resultado.textContent + "9";
 }
-cero.onclick = function (){
+cero.onclick = function () {
     resultado.textContent = resultado.textContent + "0";
 }
 
-reset.onclick = function (){
+reset.onclick = function () {
     resetear(); //funcion C para volver todo a cero
 }
-suma.onclick = function (){
-    operandoa = resultado.textContent;
+suma.onclick = function () {
+    operacionUno = resultado.textContent;
     operacion = "+";
+    limpiar();
 }
-resta.onclick = function (){
-    operandoa = resultado.textContent;
+resta.onclick = function () {
+    operacionUno = resultado.textContent;
     operacion = "-";
+    limpiar();
 }
-multiplicacion.onclick = function (){
-    operandoa = resultado.textContent;
+multiplicacion.onclick = function () {
+    operacionUno = resultado.textContent;
     operacion = "*";
+    limpiar();
 }
-division.onclick = function (){
-    operandoa = resultado.textContent;
+division.onclick = function () {
+    operacionUno = resultado.textContent;
     operacion = "/";
+    limpiar();
 }
-igual.onclick = function (){
-    operandob = resultado.textContent;
+
+igual.onclick = function () {
+    operacionDos = resultado.textContent;
     resolver();
+}
+
+function limpiar() {
+    resultado.textContent = "";
 }
 
 function resetear() {
     resultado.textContent = "";
-    op1 = 0;
-    op2 = 0;
+    operacionUno = 0;
+    operacionDos = 0;
     operacion = "";
 }
 
 function resolver() {
-    let resu = 0;
+    let res = 0;
     switch (operacion) {
         case "+":
-            res = parseFloat(op1) + parseFloat(op2);
+            res = parseFloat(operacionUno) + parseFloat(operacionDos);
             break;
         case "-":
-            res = parseFloat(op1) - parseFloat(op2);
+            res = parseFloat(operacionUno) - parseFloat(operacionDos);
             break;
         case "*":
-            res = parseFloat(op1) * parseFloat(op2);
+            res = parseFloat(operacionUno) * parseFloat(operacionDos);
             break;
         case "/":
-            res = parseFloat(op1) / parseFloat(op2);
+            res = parseFloat(operacionUno) / parseFloat(operacionDos);
             break;
     }
     resetear();
-    resultado.textContent = resu;
+    resultado.textContent = res;
 }
 
 
